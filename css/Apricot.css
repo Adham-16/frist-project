@@ -7,12 +7,15 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: "Work Sans", sans-serif;
+  min-height: 100vh;
 }
 .container {
   padding-left: 15px;
@@ -34,7 +37,7 @@ body {
   margin: -30px 0 0;
   font-size: 20px;
   text-align: center;
-  color: rgb(142, 141, 141);
+  color: rgb(83, 83, 83);
 }
 
 /* End componant */
@@ -134,6 +137,8 @@ body {
   background-size: cover;
   height: calc(100vh - 64px);
   position: relative;
+  min-height: 100vh;
+
 }
 .landing .intro-text {
   position: absolute;
@@ -145,13 +150,13 @@ body {
 .landing .intro-text h1 {
   margin: 0;
   font-weight: bold;
-  font-size: 42px;
+  font-size: 50px;
   color: #040404;
 }
 .landing .intro-text h4 {
   margin: 0;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 25px;
   color: #040404;
 }
 
@@ -161,7 +166,7 @@ body {
 .features {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: rgb(173, 193, 186);
+  background-color: rgb(112, 160, 173);
 }
 .features .container {
   display: grid;
@@ -241,7 +246,7 @@ body {
 .portfolio {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-color: rgb(173, 193, 186);
+  background-color: rgb(112, 160, 173);
 }
 .portfolio .portfolio-content {
   display: grid;
@@ -251,16 +256,17 @@ body {
   text-align: center;
 }
 .portfolio .portfolio-content .card {
-  background-color: rgb(173, 193, 186);
+  background-color:#fff;
 }
 .portfolio .portfolio-content .card img {
-  max-width: 100%;
+  width: 100%;
 }
 .portfolio .portfolio-content .card .info {
-  padding: 20px;
+  padding: 20px 0;
 }
 .portfolio .portfolio-content .card .info h3 {
   margin: 0;
+  
 }
 .portfolio .portfolio-content .card .info p {
   color: #2c4755;
@@ -292,19 +298,21 @@ body {
   position: absolute;
   background-color: rgb(235 232 232);
   width: 60px;
-  height: calc(90% + 5px);
-  top: -50px;
+  height: calc(90% + 50px);
+  top: -25px;
   left: -20px;
+      z-index: -1;
 }
 .about .about-contant .image::after {
   content: "";
-  top: -40px;
+  top: -25px;
   position: absolute;
   width: 90px;
-  height: 200px;
-  border-left: 80px solid var(--secondary-color);
-  border-bottom: 80px solid var(--secondary-color);
-  right: -70px;
+  height: 180px;
+  border-left: 60px solid #70A0AD;
+  border-bottom: 60px solid #70A0AD;
+  right: -85px;
+      z-index: -1;
 }
 
 
@@ -312,8 +320,9 @@ body {
   max-width: 100%;
 }
 .about .about-contant .text {
-  flex-basis: calc(100% - 50px);
+  flex-basis: calc(100% - 500px);
   text-align: center;
+  font-size: 15px;
 }
 .about .about-contant .text p:first-of-type {
   font-weight: bold;
@@ -334,7 +343,7 @@ body {
 .contact {
   padding-top: var(--section-padding);
   padding-bottom: calc(var(--section-padding) + 60px);
-  background-color: rgb(173, 193, 186);
+  background-color: rgb(112, 160, 173);
 }
 .contact .info {
   padding-top: var(--section-padding);
